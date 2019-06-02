@@ -1,13 +1,19 @@
-# AngularOtpVerification
+# Angular Otp Verification
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+OTP verification input login implementation.
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Highly configurable Angular otp verification. Compatible Angular 7+.
 
-## Code scaffolding
+[Online demo](link) is here.
 
+
+## Installation
+
+To install this component to an external project, follow the procedure:
+
+ 1. # npm install mydatepicker --save
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build

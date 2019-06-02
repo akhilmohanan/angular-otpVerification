@@ -1,6 +1,6 @@
 {
   "name": "angular-otp-verification",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -48,5 +48,22 @@
     "tslib": "^1.9.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.6"
-  }
+  },
+  "description": "OTP verification input login implementation.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhilmohanan/angular-otpVerification.git"
+  },
+  "keywords": [
+    "angular",
+    "otp",
+    "verification"
+  ],
+  "author": "Akhil M",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akhilmohanan/angular-otpVerification/issues"
+  },
+  "homepage": "https://github.com/akhilmohanan/angular-otpVerification#readme"
 }
