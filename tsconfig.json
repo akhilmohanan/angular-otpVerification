@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "otp-verification": [
+        "dist/otp-verification"
+      ],
+      "otp-verification/*": [
+        "dist/otp-verification/*"
+      ]
+    }
   }
 }

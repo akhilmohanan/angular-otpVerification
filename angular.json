@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "otp-verification": {
+      "root": "projects/otp-verification",
+      "sourceRoot": "projects/otp-verification/src",
+      "projectType": "library",
+      "prefix": "angular",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/otp-verification/tsconfig.lib.json",
+            "project": "projects/otp-verification/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/otp-verification/src/test.ts",
+            "tsConfig": "projects/otp-verification/tsconfig.spec.json",
+            "karmaConfig": "projects/otp-verification/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/otp-verification/tsconfig.lib.json",
+              "projects/otp-verification/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-otpVerification"
