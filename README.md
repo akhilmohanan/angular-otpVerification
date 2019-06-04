@@ -13,8 +13,8 @@ Highly configurable Angular otp verification. Compatible Angular 7+.
 
 To install this component to an external project, follow the procedure:
 
- 1. **npm install mydatepicker --save**
- 2. Add **MyDatePickerModule** import to your **@NgModule** like example below
+ 1. **npm install otp-verification --save**
+ 2. Add **OtpVerificationModule** import to your **@NgModule** like example below
     ```javascript
       import { BrowserModule } from '@angular/platform-browser';
       import { NgModule } from '@angular/core';
