@@ -4,6 +4,11 @@
 /dist
 /tmp
 /out-tsc
+/project/otp-verification/bundles/*
+/project/otp-verification/esm5/*
+/project/otp-verification/esm2015/*
+/project/otp-verification/fesm5/*
+/project/otp-verification/fesm2015/*
 
 # dependencies
 /node_modules
