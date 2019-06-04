@@ -4,7 +4,7 @@
 /dist
 /tmp
 /out-tsc
-/project/otp-verification/dist/*
+/projects/otp-verification/dist/*
 
 # dependencies
 /node_modules
