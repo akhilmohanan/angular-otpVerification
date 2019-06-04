@@ -1,8 +1,29 @@
 {
   "name": "otp-verification",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "peerDependencies": {
     "@angular/common": "^7.1.0",
     "@angular/core": "^7.1.0"
-  }
+  },
+  "private": false,
+  "author": "Akhil M",
+  "description": "OTP verification implementation for faster integration",
+  "main": "public_api.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhilmohanan/angular-otpVerification.git"
+  },
+  "keywords": [
+    "otp",
+    "angular",
+    "otp-verification"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akhilmohanan/angular-otpVerification/issues"
+  },
+  "homepage": "https://github.com/akhilmohanan/angular-otpVerification#readme"
 }
