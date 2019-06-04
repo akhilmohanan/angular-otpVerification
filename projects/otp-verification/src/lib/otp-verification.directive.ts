@@ -7,7 +7,7 @@ import { Directive, HostListener, Input } from '@angular/core';
 
 export class OtpVerificationDirective {
 
-  @Input() angularOnlyNumber = false;
+  @Input() isAlphanumeric = true;
 
   public alphabetsKeyCode = 'abcdefghijklmnopqrstuvwxyz'.split('').map(alalphabet => 'Key' + alalphabet.toUpperCase());
   public numericKeyCodes = [];
@@ -21,12 +21,11 @@ export class OtpVerificationDirective {
 
   @HostListener('keydown', ['$event'])
   onKeyDown(e: KeyboardEvent) {
-    console.log(this.angularOnlyNumber);
     // Ensure that it is a number and stop the keypress
-    if (!this.angularOnlyNumber && (e.shiftKey || !this.numericKeyCodes.includes(e.code))) {
+    if (!this.isAlphanumeric && (e.shiftKey || !this.numericKeyCodes.includes(e.code))) {
       e.preventDefault();
     }
-    if (this.angularOnlyNumber && !(this.numericKeyCodes.includes(e.code) || this.alphabetsKeyCode.includes(e.code))) {
+    if (this.isAlphanumeric && !(this.numericKeyCodes.includes(e.code) || this.alphabetsKeyCode.includes(e.code))) {
       e.preventDefault();
     }
   }
