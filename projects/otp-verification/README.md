@@ -6,7 +6,7 @@ OTP verification input login implementation.
 
 Highly configurable Angular otp verification. Compatible Angular 7+.
 
-[Online demo](link) is here.
+[Online demo](https://akhilmohanan.github.io/angular-otpVerification/) is here.
 
 
 ## Installation and usage
