@@ -2,7 +2,7 @@ import { Component, Output, ViewChild, EventEmitter, Input, ElementRef } from '@
 import { OtpVerificationService } from './otp-verification.service';
 
 @Component({
-  selector: 'angular-otp-verification',
+  selector: 'ng-otp',
   templateUrl: './otp-verification.component.html',
   styleUrls: ['./otp-verification.component.scss']
 })
@@ -14,20 +14,18 @@ export class OtpVerificationComponent {
 
   @ViewChild('otp') otpVal: ElementRef;
 
-  public specialKeys = ['CapsLock', 'ControlLeft', 'ControlRight', 'ShiftLeft', 'ShiftRight',
-    'AltLeft', 'AltRight', 'Escape', 'Backquote', 'ArrowUp',
-    'ArrowDown', 'Delete', 'Insert', 'End', 'Home', 'PageDown', 'ArrowRight'];
+  public specialKeys = [
+    'CapsLock', 'ControlLeft', 'ControlRight', 'ShiftLeft', 'ShiftRight',
+    'AltLeft' , 'AltRight'   , 'Escape'      , 'Backquote', 'ArrowUp'   ,
+    'Space'   , 'ArrowDown'  , 'Delete'      , 'Insert'   , 'End'       ,
+    'Home'    , 'PageDown'   , 'ArrowRight'  , 'WakeUp'
+  ];
 
   public inputLimt = [];
 
   constructor(
     private otpVerificationService: OtpVerificationService
-  ) {
-    const functionKeys = '1,2,3,4,5,6,7,8,9,10,11,12'.split(',').map(digit => {
-      return 'F' + digit;
-    });
-    this.specialKeys = this.specialKeys.concat(functionKeys);
-  }
+  ) { }
 
   public nextDigit(event, next, previous, current) {
     if (this.specialKeys.includes(event.code)) {
@@ -60,15 +58,15 @@ export class OtpVerificationComponent {
           next.focus();
         }
       });
-      this.returnOtp();
     }
+    this.returnOtp();
   }
 
   public returnOtp() {
     let otp = '';
-    [...this.otpVal.nativeElement.children].forEach(child => {
-      if (!child.value) { return; }
-      otp += child.value;
+    Array.from(this.otpVal.nativeElement.children).forEach(child => {
+      if (!child['value']) { return; }
+      otp += child['value'];
     });
 
     if (otp.length === 4) {
